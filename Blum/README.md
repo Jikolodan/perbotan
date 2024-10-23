@@ -1,296 +1,193 @@
-# BlumTod
+![Blum banner](https://raw.githubusercontent.com/zuydd/image/main/blum.jpeg)
 
-AUTO CLAIM FOR BLUM / @blum
+# Tool Auto Blum NodeJS by ZuyDD
 
-# Table of Contents
-- [BlumTod](#blumtod)
-- [Table of Contents](#table-of-contents)
-- [Warning](#warning)
-- [Support My Work!](#support-my-work)
-- [Available Features](#available-features)
-- [Registration](#registration)
-- [How to Use](#how-to-use)
-  - [Command Line Options / Arguments](#command-line-options--arguments)
-  - [About Proxies](#about-proxies)
-  - [Windows](#windows)
-  - [Linux](#linux)
-  - [Termux](#termux)
-- [Viewing Reports](#viewing-reports)
-- [How to Get the Query](#how-to-get-the-query)
-- [JavaScript Code to Get Data in Telegram Desktop App](#javascript-code-to-get-data-in-telegram-desktop-app)
-- [How to Update](#how-to-update)
-- [Running 24/7](#running-247)
-- [Error Table](#error-table)
-- [Discussion](#discussion)
-- [Questions and Answers](#questions-and-answers)
-- [Thank You](#thank-you)
-
-# Warning
-
-All risks are borne by the user
-
-# Support My Work!
-
-If you like my work, you can support me through the following links:
-
-- [Indonesia] https://s.id/nusanqr (QRIS)
-- [Indonesia] https://trakteer.id/fawwazthoerif/tip
-- [Global] https://sociabuzz.com/fawwazthoerif/tribe
-- If you want to send support in another form, you can contact me via Telegram.
-
-# Available Features
-
-- [x] Automatic Claim Every 8 Hours
-- [x] Automatic Daily Check-In (Login)
-- [x] Automatic Claim of Referral Results
-- [x] Proxy Support
-- [x] Automatic Task Completion
-- [x] Automatic Game Play after Claiming
-- [x] Multi-process support
-- [x] Random User-Agent
-- [x] Total balance report of all accounts
-- [x] Waiting time before starting the program
-
-# Registration
-
-Click the following link to register: [https://t.me/BlumCryptoBot/app?startapp=ref_aPYIYj1oKc](https://t.me/BlumCryptoBot/app?startapp=ref_aPYIYj1oKc)
-
-# How to Use
-
-## Command Line Options / Arguments
-
-This script/program supports several argument parameters that can be used. Here's an explanation of the arguments:
-
-`--data` / `-D`: Used when you have a different filename for storing account data. By default, the filename used by this script/program to store account data is `data.txt`. For example, if you have a file named `query.txt` as the file storing account data, just run `bot.py` with the `--data` / `-D` argument. Example: `python bot.py --data query.txt`
-
-`--proxy` / `-P`: Used when you have a different filename for storing the proxy list. The filename used by this script/program to store the proxy list is `proxies.txt`. For example, if you have a file named `prox.txt` as the file storing the proxy list, you just need to add the `--proxy` / `-P` argument parameter to use your proxy file. Example: `python bot.py --proxy prox.txt`
-
-`--worker` / `-W`: This argument is used to customize the number of threads/workers used when the bot script is running. By default, this script/software uses (total CPU cores / 2) as the number of workers. For example, if your CPU has 6 cores, the number of workers used is 3. You can customize the number of workers using this argument. For example, if you want to set the number of workers to 100, run `bot.py` with this argument: `python bot.py --worker 100`. And if you don't like using workers/threads/multiprocessing, you can customize the worker to 1, for example: `python bot.py --worker 1`.
-
-`--action` / `-A`: This argument is used to directly enter the desired menu. For example, if this bot script has 5 menus and you don't want to input manually, you can use this argument to directly enter the desired menu. Example: `python bot.py --action 5` means you will directly enter menu number 5. This argument is useful if you're using docker/pm2 to run the bot script in the background process.
-
-## About Proxies
-
-Register on the following website to get free proxies: [Here](https://www.webshare.io/?referral_code=dwj0m9cdi4mp)
-
-Website with the cheapest proxy price $1/GB [Here](https://dataimpulse.com/?aff=48082)
-
-You can add proxy lists in the `proxies.txt` file, and the proxy format is as follows:
-
-If there is authentication:
-
-Format:
-
-```
-protocol://user:password@hostname:port
-```
-
-Example:
-
-```
-http://admin:admin@69.69.69.69:6969
-```
-
-If there is no authentication:
-
-Format:
-
-```
-protocol://hostname:port
-```
-
-Example:
-
-```
-http://69.69.69.69:6969
-```
-
-Please pay close attention to whether the proxy you are using requires authentication or not, as many people DM me asking about how to use proxies.
-
-## Windows 
-
-1. Make sure your computer has Python and Git installed.
-
-    Recommendation: Use Python version 3.8+ (3.8 or newer)
-   
-   Python site: [https://python.org](https://python.org)
-   
-   Git site: [https://git-scm.com/](https://git-scm.com/)
-
-2. Clone this repository.
-   ```shell
-   git clone https://github.com/akasakaid/blumtod.git
-   ```
-
-3. Enter the BlumTod folder
-   ```
-   cd blumtod
-   ```
-
-4. Install the required modules/libraries.
-   ```
-   python -m pip install -r requirements.txt
-   ```
-
-5. Edit the `data.txt` file, enter your query data into the `data.txt` file. You can get your query by following [How to Get the Query](#how-to-get-the-query). One line for 1 account, if you want to add a 2nd account, fill it in on a new line.
-
-6. Run the program/script.
-   ```
-   python bot.py
-   ```
-
-## Linux 
-
-1. Make sure your computer has Python and Git installed.
-
-    Recommendation: Use Python version 3.8+ (3.8 or newer)
-   
-   Python
-   ```shell
-   sudo apt install python3 python3-pip
-   ```
-   Git
-   ```shell
-   sudo apt install git
-   ```
-
-2. Clone this repository.
-   ```shell
-   git clone https://github.com/akasakaid/blumtod.git
-   ```
-
-3. Enter the BlumTod folder
-   ```
-   cd blumtod
-   ```
-
-4. Install the required modules/libraries.
-   ```
-   python -m pip install -r requirements.txt
-   ```
-
-5. Edit the `data.txt` file, enter your query data into the `data.txt` file. You can get your query by following [How to Get the Query](#how-to-get-the-query). One line for 1 account, if you want to add a 2nd account, fill it in on a new line.
-
-6. Run the program/script.
-   ```
-   python bot.py
-   ```
-
-## Termux
-
-1. Make sure your device has Python and Git installed.
-
-    Recommendation: Use Python version 3.8+ (3.8 or newer)
-   
-   Python
-   ```shell
-   pkg install python3
-   ```
-   Git
-   ```shell
-   pkg install git
-   ```
-
-2. Clone this repository.
-   ```shell
-   git clone https://github.com/akasakaid/blumtod.git
-   ```
-
-3. Enter the BlumTod folder
-   ```
-   cd blumtod
-   ```
-
-4. Install the required modules/libraries.
-   ```
-   python -m pip install -r requirements.txt
-   ```
-
-5. Edit the `data.txt` file, enter your query data into the `data.txt` file. You can get your query by following [How to Get the Query](#how-to-get-the-query). One line for 1 account, if you want to add a 2nd account, fill it in on a new line.
-
-6. Run the program/script.
-   ```
-   python bot.py
-   ```
-
-# Viewing Reports
-
-To view a report of the total balance of all accounts you can run a file called `report.py`
-
-# How to Get the Query
-
-The required data is the same as [pixelversebot](https://github.com/akasakaid/pixelversebot), so you can watch the same tutorial video!
-
-Here: [https://youtu.be/KTZW9A75guI](https://youtu.be/KTZW9A75guI)
-
-# JavaScript Code to Get Data in Telegram Desktop App
-
-Here are some javascript codes that can be tried to get data through the desktop telegram application.
-
-After you execute the code try to paste it if it doesn't appear then try another javascript code.
-
-```javascript
-copy(Telegram.WebApp.initData)
-```
-
-```javascript
-copy(JSON.parse(sessionStorage.__telegram__initParams).tgWebAppData)
-```
-
-# How to Update
-
-Delete the `database.sqlite3` file first, you can use the terminal commands below (adjust to the operating system you are using)
-
-Windows CMD / Windows Powershell
-
-```shell
-del database.sqlite3
-```
-
-Linux/Termux/Unix/MacOs
-
-```shell
-rm database.sqlite3
-```
-
-You can update only with the `git pull` command if you have already cloned the repository with git.
-If you did not clone the repository with git you can do a forced update with the command below (adjust the operating system you are using.).
-
-Windows powershell : 
-```shell
-Invoke-WebRequest https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/bot.py -OutFile bot.py; Invoke-WebRequest https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/models.py -OutFile models.py; Invoke-WebRequest https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/requirements.txt -OutFile requirements.txt
-```
-
-Linux/Termux/Unix/Windows CMD/MacOS: 
-
-```shell
-curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/bot.py -o bot.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/models.py -o models.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/requirements.txt -o requirements.txt
-```
-
-# Running 24/7
-
-You can run the bot script 24/7 using a VPS/RDP. You can use the `screen` or `pm2` application if using a Linux operating system to run the bot script in the background.
-
-# Error Table
-
-| Error                 | Description                                                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| failed get json error | This is because the server response is not in JSON format and may be in HTML. You can check the server response in the http.log file |
-| failed get task list  | This is because the server response doesn't provide the expected response. You can check the server response in the http.log file    |
-| cannot start game     | Similar to the above error, this is due to the server. You can check the server response in the http.log file                        |
-
-# Discussion
-
-If you have questions or anything else, you can ask here: [@sdsproject_chat](https://t.me/sdsproject_chat)
-
-# Questions and Answers
-
-Q: Is it mandatory to use a proxy with this bot script/program?
-
-A: No, this bot script/program does not require a proxy.
-
-Q: How do I use a proxy?
-
-A: The simple explanation is that you just need to fill the `proxies.txt` file with the proxy format I explained above.
-
-# Thank You
+**Tool phát triển và chia sẻ miễn phí bởi ZuyDD**
+
+<a href="https://www.facebook.com/zuy.dd"><img src="https://raw.githubusercontent.com/zuydd/image/main/facebook.svg" alt="Facebook"></a>
+<a href="https://t.me/zuydd"><img src="https://raw.githubusercontent.com/zuydd/image/main/telegram.svg" alt="Telegram"></a>
+
+> [!WARNING]
+> Mọi hành vi buôn bán tool dưới bất cứ hình thức nào đều không được cho phép!
+
+## Mua hoặc nhận miễn phí API KEY tại https://zuy-web.vercel.app/blum
+
+## 🛠️ Hướng dẫn cài đặt
+
+> Yêu cầu đã cài đặt NodeJS
+
+- Bước 1: Tải về phiên bản mới nhất của tool [tại đây ⬇️](https://github.com/zuydd/blum/archive/refs/heads/main.zip)
+- Bước 2: Giải nén tool
+- Bước 3: Tại thư mục tool vừa giải nén (thư mục có chứa file package.json), chạy lệnh `npm install` để cài đặt các thư viện bổ trợ
+
+## 💾 Cách thêm dữ liệu tài khoản
+
+> Tool hỗ trợ cả `user` và `query_id`
+
+> Tất cả dữ liệu mà bạn cần nhập đều nằm ở các file trong thư mục 📁 `src / data`
+
+- [users.txt](src/data/users.txt) : chứa danh sách `user` hoặc `query_id` của các tài khoản, mỗi dòng ứng với một tài khoản
+- [proxy.txt](src/data/proxy.txt) : chứa danh sách proxy, proxy ở mỗi dòng sẽ ứng với tài khoản ở dòng đó trong file users.txt phía trên, để trống nếu không dùng proxy
+- [token.json](src/data/token.json) : chứa danh sách token được tạo ra từ `user` hoặc `query_id`. Token sẽ được tự động sinh ra khi bạn chạy tool
+
+> Định dạng proxy: http://user:pass@ip:port
+
+## >\_ Các lệnh và chức năng tương ứng
+
+| Lệnh            | Chức năng                                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `npm run start` | Dùng để chạy farming/claim, làm nhiệm vụ, điểm danh, chơi game, claim điểm invite,.... tóm lại game có gì là nó làm cái đó |
+
+## 🕹️ Các tính năng có trong tool
+
+- tự động điểm danh hàng ngày
+- tự động tham gia tribe để nhận thêm 10% điểm thưởng
+- tự động làm nhiệm vụ
+- tự động farming/claim khi tới giờ
+- tự động chơi game (yêu cầu API KEY, mua hoặc nhận miễn phí API KEY tại https://zuy-web.vercel.app/blum)
+- claim điểm invite
+- nhận diện proxy tự động, tự động kết nối lại proxy khi bị lỗi. ae ai chạy proxy thì thêm vào file proxy.txt ở dòng ứng với dòng chứa acc muốn chạy proxy đó, acc nào không muốn chạy proxy thì để trống hoặc gõ skip vào
+- đa luồng chạy bao nhiêu acc cũng được, không bị block lẫn nhau
+- cài đặt thời gian chơi game, mặc định game sẽ luôn chơi game, nếu gắp các khung giờ cao điểm bạn có thể tìm biến `TIME_PLAY_GAME = []` nhập các khung giờ không muốn chơi game vào để bỏ qua chơi game, ví dụ nhập [1, 2, 3, 8, 20] thì sẽ không chơi game trong các khung giờ 1, 2, 3, 8, 20 giờ
+
+> [!WARNING]
+>
+> - Nếu gặp lỗi đăng nhập, làm nhiệm vụ hay chơi game thì là do server của blum nó lỏ chứ không phải lỗi tool, cứ kệ nó, hồi nó quay lại làm sau khi hết lỗi.
+> - Vì server nó hay lỗi vào khung giờ 14h-24h nên khuyến khích ae chạy tool lần đầu vào khung giờ 4h-12h để chạy mượt mà nhé
+
+## ♾ Cài đặt đa luồng
+
+- Mặc định tool sẽ chạy đa luồng ứng với số tài khoản bạn nhập vào, không cần cài đặt thêm gì cả.
+- Mặc định ở vòng lặp đầu tiên mỗi tài khoản (luồng) sẽ chạy cách nhau 30s để tránh spam request, có thể tìm biến `DELAY_ACC = 10` trong file [index.js](src/run/index.js) để điều chỉnh cho phù hợp
+
+## ❌ Chế độ thử lại khi lỗi
+
+- Đỗi với lỗi kết nối proxy, hệ thống sẽ cố thử lại sau mỗi 30s, bạn có thể cài đặt giới hạn số lần thử lại bằng cách tìm biến `MAX_RETRY_PROXY = 20` trong file [index.js](src/run/index.js) để điều chỉnh cho phù hợp (mặc định là 20). Khi quá số lần thử kết nối lại hệ thống sẽ dừng auto tài khoản đó và nghi nhận lỗi vào file [log.error.txt](src/data/log.error.txt)
+- Đỗi với lỗi đăng nhập thất bại, hệ thống sẽ cố thử lại sau mỗi 60s, bạn có thể cài đặt giới hạn số lần thử lại bằng cách tìm biến `MAX_RETRY_LOGIN = 20` trong file [index.js](src/run/index.js) để điều chỉnh cho phù hợp (mặc định là 20). Khi quá số lần thử đăng nhập lại hệ thống sẽ dừng auto tài khoản đó và nghi nhận lỗi vào file [log.error.txt](src/data/log.error.txt)
+
+## 🔄 Lịch sử cập nhật
+
+> Khi cập nhật phiên bản mới chỉ cần copy thư mục 📁 [data](src/data) của bản cũ ghi đè lại ở bản mới là có thể chạy được mà không cần lấy lại data
+
+> Phiên bản mới nhất: `v0.1.9`
+
+<details>
+<summary>v0.1.9 - 📅 23/10/2024</summary>
+  
+- Fix lỗi dừng tool
+</details>
+<details>
+<summary>v0.1.8 - 📅 23/10/2024</summary>
+  
+- Thêm fake thiết bị
+- Thêm hệ thống API KEY chơi game
+</details>
+<details>
+<summary>v0.1.7 - 📅 16/10/2024</summary>
+  
+- Thay đổi cơ chế cài đặt thời gian không chơi game (mặc định sẽ luôn chơi game)
+</details>
+<details>
+<summary>v0.1.6 - 📅 16/10/2024</summary>
+  
+- Fix lỗi chơi game
+- Thêm nhặt chó (DOGS) khi chơi game
+</details>
+<details>
+<summary>v0.1.5 - 📅 12/10/2024</summary>
+  
+- Tạm bỏ qua chơi game, sẽ fix sau
+</details>
+<details>
+<summary>v0.1.4 - 📅 25/09/2024</summary>
+  
+- Tạm bỏ qua làm nhiệm vụ do server lỗi (sẽ tự động mở lại khi server ổn định)
+</details>
+<details>
+<summary>v0.1.3 - 📅 19/09/2024</summary>
+  
+- Fix lỗi làm nhiệm vụ
+</details>
+<details>
+<summary>v0.1.2 - 📅 18/09/2024</summary>
+  
+- Thêm làm nhiệm vụ X Empire
+</details>
+<details>
+<summary>v0.1.1 - 📅 14/09/2024</summary>
+  
+- Fix lỗi vòng lặp liên tục
+- Thêm thông báo từ hệ thống và kiểm tra version
+- Thêm giới hạn thời gian chơi game tránh lúc server bị lag, mặc định chỉ chơi game từ 1h sáng đến 13h trưa (giờ Việt Nam UTC+7).
+</details>
+<details>
+<summary>v0.1.0 - 📅 14/09/2024</summary>
+  
+- Thêm làm nhiệm vụ weekly
+</details>
+<details>
+<summary>v0.0.9 - 📅 13/09/2024</summary>
+  
+- Sửa lỗi spam request server github
+</details>
+<details>
+<summary>v0.0.8 - 📅 13/09/2024</summary>
+  
+- Fix lỗi lấy data từ server
+</details>
+<details>
+<summary>v0.0.7 - 📅 13/09/2024</summary>
+  
+- Fix lỗi lấy danh sách nhiệm vụ thất bại
+- Hỗ trợ làm nhiệm vụ Promo
+- Thêm đếm ngược đến lần chạy tiếp theo
+- Tự động lấy data câu trả lời từ server sau mỗi 20-40 phút
+</details>
+<details>
+<summary>v0.0.6 - 📅 11/09/2024</summary>
+  
+- Thêm tự động làm các task yêu cầu trả lời câu hỏi (do server blum không ổn định nên có thể lần đầu làm sẽ bị lỗi, mọi người cứ kệ nó để hồi nó quay lại làm là được)
+- Sửa lỗi chức năng điểm danh (checkin) hiển thị đúng trạng thái và phần thưởng khi điểm danh
+- Sửa lỗi không tự động claim điểm giới thiệu
+- Fix lỗi lấy danh sách nhiệm vụ thất bại
+</details>
+<details>
+<summary>v0.0.5 - 📅 08/09/2024</summary>
+  
+- Thêm cơ chế giới hạn số lần thử lại khi lỗi proxy/đăng nhập
+- Ghi nhận lỗi vào file log khi thử lại quá số lần cài đặt để các bạn chạy nhiều acc tiện theo dõi
+- Cập nhật chính xác số vé chơi game sau khi checkin
+</details>
+<details>
+<summary>v0.0.4 - 📅 07/09/2024</summary>
+  
+- Cập nhật lại data task, fix lỗi không làm task
+</details>
+<details>
+<summary>v0.0.3 - 📅 05/09/2024</summary>
+  
+- Thay đổi API login
+</details>
+<details>
+<summary>v0.0.2 - 📅 02/09/2024</summary>
+  
+- Điều chỉnh điểm point chơi game về đúng với thực tế (từ 180 - 200)
+</details>
+<details>
+<summary>v0.0.1 - 📅 02/09/2024</summary>
+  
+- Chia sẽ tool đến cộng đồng
+</details>
+
+## 🎁 Donate
+
+Chúng tôi rất vui được chia sẻ các mã script và tài nguyên mã nguồn miễn phí đến cộng đồng làm airdrop. Nếu bạn thấy các công cụ và tài liệu của chúng tôi hữu ích và muốn ủng hộ chúng tôi tiếp tục phát triển và duy trì các dự án này, bạn có thể đóng góp hỗ trợ qua hình thức donate.
+
+Mỗi đóng góp của bạn sẽ giúp chúng tôi duy trì chất lượng dịch vụ và tiếp tục cung cấp những tài nguyên giá trị cho cộng đồng làm airdrop. Chúng tôi chân thành cảm ơn sự hỗ trợ và ủng hộ của bạn!
+
+Mãi iu 😘😘😘
+
+<div style="display: flex; gap: 20px;">
+  <img src="https://raw.githubusercontent.com/zuydd/image/main/qr-momo.png" alt="QR Momo" height="340" />
+  <img src="https://raw.githubusercontent.com/zuydd/image/main/qr-binance.jpg" alt="QR Binance" height="340" />
+</div>
