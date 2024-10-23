@@ -1,8 +1,0 @@
-telethon
-colorama
-httpx
-httpx-socks
-anyio
-httpx-socks[asyncio]
-aiofiles
-fake-useragent

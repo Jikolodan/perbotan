@@ -1,57 +1,80 @@
-# NotPixel Multi Account 100% Uptime FREE Python Bot
+> [<img src="https://img.shields.io/badge/Telegram-%40Me-orange">](https://t.me/roddyfred)
 
-This Python NotPixel Bot script manages Multi Account for NotPixel bot, Unlimited Account Support handling AUTO PIXEL FILL , AUTO RESOURCE CLAIM. If you can run your pc 24/7 then you dont need a Vps else Better buy a small VPS!!
+# Use Node.Js 18 or later
 
-**Register here NotPixel** - [https://t.me/notpixel/app?startapp=f6032442305](https://t.me/notpixel/app?startapp=f6032442305)
+## Functionality
 
-# NotPixel backed by Notcoin
+| Functional                            | Supported |
+| ------------------------------------- | :-------: |
+| Auto paintiing                        |    ✅     |
+| Claiming task                         |    ✅     |
+| Multithreading                        |    ✅     |
+| Caching session data                  |    ✅     |
+| Using a session/query_id              |    ✅     |
+| Binding a proxy to a session/query_id |    ✅     |
+| Random sleep time between clicks      |    ✅     |
 
-# Get Query_id by ->
+### [How to add query id](https://github.com/Freddywhest/RockyRabbitBot/blob/main/AddQueryId.md)
 
-1. Go to telegram desktop Settings then Advance > experimental settings.
-2. Then Turn on `enable web inspecting`
-3. Done ! Login to NOTPIXEL and inspect to get the Query ID (right click to Inspect)
-4. ![image](https://github.com/user-attachments/assets/6be1fce1-923b-4f0b-b1e2-71c845e58580)
+## [Settings](https://github.com/FreddyWhest/NotPixel/blob/main/.env-example)
 
+| Settings                       | Description                                                                |
+| ------------------------------ | -------------------------------------------------------------------------- |
+| **API_ID / API_HASH**          | Platform data from which to launch a Telegram session (stock - Android)    |
+| **AUTO_PAINT**                 | Whether the bot should paint (True / False)                                |
+| **AUTO_CLAIM_TASKS**           | Whether the bot claim tasks (True / False)                                 |
+| **AUTO_JOIN_SQUAD**            | Whether the bot should join sqaud (sessions only) (True / False)           |
+| **SLEEP_BETWEEN_REQUESTS**     | Delay between taps in seconds (eg. [200, 700])                             |
+| **DELAY_BETWEEN_STARTING_BOT** | Delay between starting in seconds (eg. [20, 30])                           |
+| **DELAY_BETWEEN_PAINTING**     | Delay between painting in seconds (eg. [20, 30])                           |
+| **DELAY_BETWEEN_TASKS**        | Delay between tasks in seconds (eg. [20, 30])                              |
+| **USE_PROXY_FROM_JS_FILE**     | Whether to use proxy from the `bot/config/proxies.js` file (True / False)  |
+| **USE_PROXY_FROM_TXT_FILE**    | Whether to use proxy from the `bot/config/proxies.txt` file (True / False) |
 
-# Setps to follow !
+## Installation
 
-1. clone the repo - `git clone https://github.com/Solana0x/NotPixel`
-2. Then `cd NotPixel`
-3. Install Python
-4. Then `pip install -r requirements.txt`
-6. Get `query_id=` from Telegram desktop by right click on your bot and then inspect
-7. Add `query_id=` in data.txt file every line = new `query_id=`
-8. Repeat the process for all the Telegram accounts
-9. One done Run the Bot code by - `python main.py`
-10. For proxy usage use `python proxy.py` add proxy in `proxy.txt file ` formate : `http://username:pass@ip:port`
-11. You can buy residentail proxies here `https://dataimpulse.com/?aff=23392` 5-10GB plan will be enough to run BLUM bot + Notpixel bot + future all bots for atleast 10K accounts
+You can download [**Repository**](https://github.com/FreddyWhest/NotPixel) by cloning it to your system and installing the necessary dependencies:
 
-# Features of the BOT
+```shell
+~ >>> git clone https://github.com/FreddyWhest/NotPixel.git
+~ >>> cd NotPixel
 
-1. AUTO RESOURCE CLAIM
-2. AUTO FILL THE PIXELS
-3. AUTO PROCESS ALL ACCOUNT EVERY HR IN LOOP
-4. AUTO FETCHES BALANCES
-5. PROXY SUPPORT
+#Linux and MocOS
+~/NotPixel >>> chmod +x check_node.sh
+~/NotPixel >>> ./check_node.sh
 
-# TODO
+OR
 
-1. AUTO UPGRADES
-2. AUTO TASKS
+~/NotPixel >>> npm install
+~/NotPixel >>> cp .env-example .env
+~/NotPixel >>> nano .env # Here you must specify your API_ID and API_HASH , the rest is taken by default
+~/NotPixel >>> node index.js
 
-# FOR ANY KIND OF HELP CONTACT : 0xphatom on Discord https://discord.com/users/979641024215416842
+#Windows
+1. Double click on INSTALL.bat in NotPixel directory to install the dependencies
+2. Double click on START.bat in NotPixel directory to start the bot
 
-**Educational Purposes Only:**
+OR
 
-This script is intended solely for educational and research purposes. The authors and contributors of this project are not responsible for any misuse of this code. Any actions taken using this code are the sole responsibility of the user.
+~/NotPixel >>> npm install
+~/NotPixel >>> cp .env-example .env
+~/NotPixel >>> # Specify your API_ID and API_HASH, the rest is taken by default
+~/NotPixel >>> node index.js
+```
 
-- **Non-Liability**: The authors of this code do not bear any responsibility for legal or ethical violations that occur due to the use of this script. The script should only be used in a controlled, legal environment, and not for any illegal activities. Misuse of this software may result in legal actions taken against the user by third parties.
-- **Third-Party Liability**: The author is not responsible for any actions taken by any organization, including but not limited to the NotPixel team, or any other entities that may use or interpret this code in any manner.
+Also for quick launch you can use arguments, for example:
 
-**Copyright Notice:**
+```shell
+~/NotPixel >>> node index.js --action=1
 
-This script is protected under the provisions of the **U.S. Copyright Act of 1976**, Title 17, United States Code. Unauthorized reproduction or distribution of this script, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.
-For more information, please consult the full text of the law: [Title 17 of the U.S. Code](https://www.copyright.gov/title17/).
+OR
 
+~/NotPixel >>> node index.js --action=2 #session
 
+OR
+
+~/NotPixel >>> node index.js --action=3 #query_id
+
+#1 - Create session
+#2 - Run clicker
+```
